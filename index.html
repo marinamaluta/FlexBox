@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Entendendo flex box</title>
+
+    <style>
+
+        * {
+            
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 700px;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #ccc;
+            padding: 20px;
+            flex-wrap: wrap;
+        
+        }
+
+        article{
+            background-color: #D88E84;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            
+            
+        }
+
+        article:nth-child(2){
+            height: 100px;
+
+
+        }
+            /*Section e article se comportam como blocos. Necessário colocar display: flex no pai.
+
+            É necessário uma estrutura de pai para filho
+
+            → NO PAI:
+
+            flex direction: row, column, row-reverse, colum-reverse.
+            flex wrap: controla a quebra do elemento
+            wrap, wrap-reverse, no-wrap.
+            justify-content (alinhamento do conteúdo): flex-start, flex-end, space-around, space-between (divide o valor total entre os elementos)
+
+            align-items(alinhamento do conteúdo vertical de pai para filho)
+            flex-start, flex-end, center, strech, baseline(utilizar a própria linha do conteúdo)
+
+            flex-flow: row nowrap; (taquigrafia para as propriedades flex-direction e flex-wrap)
+
+            → NO FILHO:
+
+            order: Mexe na ordem do itens sem mexer no html. ex: numeração
+            flex-grow: default é 0 (espaço que falta para ser ocupado no pai)
+            flex-basis: default é auto (define uma largura de cada elemento caso não 
+
+            Obs: Qd se utiliza flex-grow, não se utiliza o justify-content: space-between.
+
+            Guia completo de referência de flex-box: https://origamid.com/projetos/flexbox-guia-completo/
+
+            */
+        </style>
+</head>
+
+
+<body>
+    <section>
+        <article>artigo 1</article>
+        <article>artigo 2</article>
+        <article>artigo 3</article>
+    </section>
+</body>
